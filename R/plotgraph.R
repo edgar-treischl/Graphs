@@ -9,17 +9,16 @@ plotgraph <- function(name) {
 
   validExamplesMsg <-
     paste0(
-      "Valid examples are: '",
-      paste(validExamples, collapse = "', '"),
-      "'")
+      "Valid examples are:\n",
+      paste(validExamples, collapse = "\n"))
 
   # if an invalid example is given, throw an error
   if (missing(name) || !nzchar(name) ||
       !name %in% validExamples) {
     stop(
-      'Please run `plotgraph()` with a valid name as an argument.\n',
+      'Please run `plotgraph()` with a valid argument.\n',
       validExamplesMsg,
-      call. = FALSE)
+      call. = TRUE)
   }
 
   # find and launch the app
