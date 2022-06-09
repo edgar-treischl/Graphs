@@ -1,12 +1,19 @@
 Package: Graphs
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Authors@R: person("Edgar", "Treischl", 
+                email = "edgar.treischl@fau.de",
+                comment = c(ORCID = "0000-0001-5627-9125"),
+                role = c("aut", "cre"))
 Description: What the package does (one paragraph).
+URL: https://edgar-treischl.github.io/Graphs/
+BugReports: https://edgar-treischl.github.io/Graphs/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
-URL: https://edgar-treischl.github.io/Graphs/
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+

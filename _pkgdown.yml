@@ -1,23 +1,17 @@
 url: https://edgar-treischl.github.io/Graphs/
 template:
   bootstrap: 5
-
+  bootswatch: simplex
 navbar:
-  title: "Graphs"
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "Illustrations"
-      href: illustrations.html
-
-  right:
-  - text: " "
-    icon: fa-github
-    href: https://github.com/edgar-treischl/Graphs
-
-
-output:
-  html_document:
-    theme:
-      bootswatch: journal
+  structure:
+    left:
+    - intro
+    - reference
+    - articles
+    right: [github]
+development:
+  mode: auto
+authors:
+  Edgar Treischl:
+    href: https://www.edgar-treischl.de/
 
