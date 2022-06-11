@@ -17,6 +17,24 @@ path <- paste( "Rmd/", Rmd_Files, sep = "" )
 #source("Rmd/utils.R")
 
 ```
+### Anscombe quartet
+
+```{r, eval=TRUE}
+library(Graphs)
+plotgraph("anscombe_quartet.R")
+```
+
+### Boxplot Illustration
+
+```{r, eval=TRUE}
+plotgraph("boxplot_illustration.R")
+```
+
+### Boxplot Pitfalls
+
+```{r, eval=TRUE}
+plotgraph("boxplot_pitfalls.R")
+```
 
 ### Pac-Man
 
