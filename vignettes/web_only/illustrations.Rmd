@@ -30,11 +30,7 @@ plotgraph("anscombe_quartet.R")
 plotgraph("boxplot_illustration.R")
 ```
 
-### Boxplot Pitfalls
 
-```{r, eval=TRUE}
-plotgraph("boxplot_pitfalls.R")
-```
 
 ### Pac-Man
 
