@@ -35,7 +35,6 @@ ggpie <- function(data, fill, legend = "none") {
 
 
 
-utils::globalVariables(c("freq", "n"))
 
 #' Make a slope chart.
 #'
@@ -80,7 +79,7 @@ ggslope <- function(data, times, outcome, group,
     ggplot2::geom_line()+
     # left side y axis labels
     ggrepel::geom_text_repel(
-      data = . |>  dplyr::filter(times == min({{times}})),
+      data = data |>  dplyr::filter(times == min({{times}})),
       ggplot2::aes(label = {{group}}),
       hjust = "left",
       box.padding = 0.10,
@@ -94,7 +93,7 @@ ggslope <- function(data, times, outcome, group,
       force = .5,
       max.iter = 3000)+
     ggrepel::geom_text_repel(
-      data = . |>  dplyr::filter(times == max({{times}})),
+      data = data |>  dplyr::filter(times == max({{times}})),
       ggplot2::aes(label = {{group}}),
       hjust = "right",
       box.padding = 0.10,
@@ -111,4 +110,6 @@ ggslope <- function(data, times, outcome, group,
                        size = 2.5)
 }
 
-utils::globalVariables(c("."))
+
+utils::globalVariables(c("freq", "n", "."))
+
