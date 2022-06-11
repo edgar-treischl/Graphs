@@ -2,7 +2,7 @@
 title: "Examples"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{examples}
+  %\VignetteIndexEntry{Examples}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,6 +17,12 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(Graphs)
 library(palmerpenguins)
-ggpie(penguins, fill = species)
-
 ```
+
+
+## A Pie Chart
+
+```{r}
+ggpie(penguins, fill = species)
+```
+
