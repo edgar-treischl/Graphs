@@ -36,3 +36,79 @@ ggpie <- function(data, fill, legend = "none") {
 
 
 utils::globalVariables(c("freq", "n"))
+
+#' Make a slope chart.
+#'
+#' @param data Data
+#' @param times Times
+#' @param outcome Outcome
+#' @param group Group
+#' @param color Color
+#' @param alpha Alpha
+#' @param linetype Linetype
+#' @param size Size
+#'
+#' @return A ggplot2 object.
+#' @export
+#'
+#' @examples
+#' df <- tidyr::tribble(
+#' ~times, ~country,  ~gdp, ~inc,
+#' "1990",   "A",  22.3, TRUE,
+#' "2000",   "A",  44.6, TRUE,
+#' "1990",   "B",  12.3, FALSE,
+#' "2000",   "B",  4.6, FALSE
+#' )
+
+#' ggslope(df,
+#'         times = times,
+#'         outcome = gdp,
+#'         group = country)
+
+ggslope <- function(data, times, outcome, group,
+                    color = NULL,
+                    alpha = NULL,
+                    linetype = NULL,
+                    size = NULL) {
+
+  ggplot2::ggplot(data, ggplot2::aes(x = {{times}},
+                                     y = {{outcome}},
+                                     group = {{group}},
+                                     color = {{color}},
+                                     size = {{size}},
+                                     linetype = {{linetype}})) +
+    ggplot2::geom_line()+
+    # left side y axis labels
+    ggrepel::geom_text_repel(
+      data = . |>  dplyr::filter(times == min({{times}})),
+      ggplot2::aes(label = {{group}}),
+      hjust = "left",
+      box.padding = 0.10,
+      point.padding = 0.10,
+      segment.color = "gray",
+      segment.alpha = 0.6,
+      fontface = "bold",
+      size = 3,
+      nudge_x = -1.95,
+      direction = "y",
+      force = .5,
+      max.iter = 3000)+
+    ggrepel::geom_text_repel(
+      data = . |>  dplyr::filter(times == max({{times}})),
+      ggplot2::aes(label = {{group}}),
+      hjust = "right",
+      box.padding = 0.10,
+      point.padding = 0.10,
+      segment.color = "gray",
+      segment.alpha = 0.6,
+      fontface = "bold",
+      size = 3,
+      nudge_x = 1.95,
+      direction = "y",
+      force = .5,
+      max.iter = 3000)+
+    ggplot2::geom_text(ggplot2::aes(label = {{outcome}}),
+                       size = 2.5)
+}
+
+utils::globalVariables(c("."))

@@ -17,6 +17,10 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Imports: 
+    cowplot,
     dplyr,
     ggplot2,
-    palmerpenguins
+    ggrepel,
+    palmerpenguins,
+    showtext,
+    tidyr
