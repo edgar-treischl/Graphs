@@ -1,7 +1,7 @@
-library(tidyverse)
+#library(tidyverse)
 library(patchwork)
 library(showtext)
-
+library(ggplot2)
 
 #The Pac Man#########
 showplot <- function(variables) {
@@ -9,7 +9,7 @@ showplot <- function(variables) {
   ## Automatically use showtext to render text for future devices
   showtext_auto()
 
-  df<-tribble(
+  df<-tidyr::tribble(
     ~Charts, ~Amount,
     "Resembles", 80.0,
     "Does not resemble", 20.0

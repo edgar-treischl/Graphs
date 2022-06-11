@@ -1,8 +1,3 @@
-#library(tidyverse)
-#library(ggbrace)
-#library(showtext)
-#library(cowplot)
-
 
 
 showplot <- function(variables) {
