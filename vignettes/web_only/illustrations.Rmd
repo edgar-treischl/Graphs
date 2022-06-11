@@ -18,6 +18,8 @@ path <- paste( "Rmd/", Rmd_Files, sep = "" )
 
 ```
 
+### Pac-Man
+
 ```{r, eval=TRUE}
 Graphs::plotgraph("pacman.R")
 ```
