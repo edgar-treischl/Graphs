@@ -19,67 +19,101 @@ path <- paste( "Rmd/", Rmd_Files, sep = "" )
 ```
 ### Anscombe quartet
 
-```{r anscombe_quartet, eval=TRUE}
+```{r anscombe_quartet, eval=FALSE}
 library(Graphs)
 plotgraph("anscombe_quartet.R")
 ```
 
+```{r, echo=FALSE, fig.alt='Anscombe quartet by Edgar Treischl'}
+knitr::include_graphics("anscombe.png")
+```
+
 ### Boxplot Illustration
 
-```{r boxplot1, eval=TRUE}
+```{r boxplot1, eval=FALSE}
 plotgraph("boxplot_illustration.R")
+```
+
+```{r, echo=FALSE, fig.alt='Boxplot Illustration by Edgar Treischl'}
+knitr::include_graphics("boxplot1.png")
 ```
 
 ### Boxplot pitfalls
 
-```{r boxplot2, eval=TRUE}
+```{r boxplot2, eval=FALSE}
 plotgraph("boxplot_pitfalls.R")
 ```
 
+```{r, echo=FALSE, fig.alt='Boxplot Pitfalls by Edgar Treischl'}
+knitr::include_graphics("boxplot2.png")
+```
 
 ### Data joins
 
 
-```{r joins, eval=TRUE}
+```{r joins, eval=FALSE}
 plotgraph("data_joins.R")
+```
+
+```{r, echo=FALSE, fig.alt='Data joins by Edgar Treischl'}
+knitr::include_graphics("joins.png")
 ```
 
 ### Data saurus
 
 
-```{r datasaurus, eval=TRUE}
+```{r datasaurus, eval=FALSE}
 plotgraph("datasaurus.R")
+```
+
+```{r, echo=FALSE, fig.alt='Data saurus by Edgar Treischl'}
+knitr::include_graphics("saurus.png")
 ```
 
 
 ### Gapminder
 
 
-```{r gapminder, eval=TRUE}
+```{r gapminder, eval=FALSE}
 plotgraph("gapminder.R")
+```
+
+```{r, echo=FALSE, fig.alt='Gapminder by Edgar Treischl'}
+knitr::include_graphics("gapminder.png")
 ```
 
 
 ### Pac-Man
 
-```{r pacman, eval=TRUE}
+```{r pacman, eval=FALSE}
 Graphs::plotgraph("pacman.R")
 ```
 
 ```{r, echo=FALSE, fig.alt='The Pacman plot by Edgar Treischl'}
-knitr::include_graphics("https://edgar-treischl.github.io/Graphs/articles/web_only/illustrations_files/figure-html/unnamed-chunk-4-1.png")
+knitr::include_graphics("pacman.png")
 ```
+
+
+
 
 ### Simpson's paradox
 
-```{r simpson, eval=TRUE}
+```{r simpson, eval=FALSE}
 Graphs::plotgraph("simpson.R")
+```
+
+```{r, echo=FALSE, fig.alt='Simpsons Paradox by Edgar Treischl'}
+knitr::include_graphics("simpson.png")
 ```
 
 ### UCB Admission
 
-```{r ucb, eval=TRUE}
+```{r ucb, eval=FALSE}
 Graphs::plotgraph("ucb_admission.R")
+```
+
+```{r, echo=FALSE, fig.alt='UCB Plot by Edgar Treischl'}
+knitr::include_graphics("ucb.png")
 ```
 
 
