@@ -19,30 +19,68 @@ path <- paste( "Rmd/", Rmd_Files, sep = "" )
 ```
 ### Anscombe quartet
 
-```{r, eval=TRUE}
+```{r anscombe_quartet, eval=TRUE}
 library(Graphs)
 plotgraph("anscombe_quartet.R")
 ```
 
 ### Boxplot Illustration
 
-```{r, eval=TRUE}
+```{r boxplot1, eval=TRUE}
 plotgraph("boxplot_illustration.R")
 ```
 
+### Boxplot pitfalls
+
+```{r boxplot2, eval=TRUE}
+plotgraph("boxplot_pitfalls.R")
+```
+
+
+### Data joins
+
+
+```{r joins, eval=TRUE}
+plotgraph("data_joins.R")
+```
+
+### Data saurus
+
+
+```{r datasaurus, eval=TRUE}
+plotgraph("datasaurus.R")
+```
+
+
+### Gapminder
+
+
+```{r gapminder, eval=TRUE}
+plotgraph("gapminder.R")
+```
 
 
 ### Pac-Man
 
-```{r, eval=TRUE}
+```{r pacman, eval=TRUE}
 Graphs::plotgraph("pacman.R")
 ```
 
 ```{r, echo=FALSE, fig.alt='The Pacman plot by Edgar Treischl'}
-knitr::include_graphics("https://edgar-treischl.github.io/Graphs/reference/figures/README-example-1.png")
+knitr::include_graphics("https://edgar-treischl.github.io/Graphs/articles/web_only/illustrations_files/figure-html/unnamed-chunk-4-1.png")
 ```
 
+### Simpson's paradox
 
+```{r simpson, eval=TRUE}
+Graphs::plotgraph("simpson.R")
+```
+
+### UCB Admission
+
+```{r ucb, eval=TRUE}
+Graphs::plotgraph("ucb_admission.R")
+```
 
 
 

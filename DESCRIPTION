@@ -22,5 +22,6 @@ Imports:
     ggplot2,
     ggrepel,
     palmerpenguins,
+    patchwork,
     showtext,
     tidyr

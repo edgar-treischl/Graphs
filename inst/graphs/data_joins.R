@@ -2,12 +2,13 @@ library(ggplot2)
 library(patchwork)
 library(showtext)
 
-font_add_google("Patua One", "Patua")
-showtext_auto()
+
 
 #Joins_Overall###############
 
 showplot <- function(variables) {
+  sysfonts::font_add_google("Patua One", "Patua")
+  showtext::showtext_auto()
   dfx <- expand.grid(x = 1:4, y = 1:2)
 
   labels_x <- c("3", "2", "1", "ID",
@@ -17,15 +18,15 @@ showplot <- function(variables) {
                  "#1363B3" , "#939191", "#6E55A1", "#302E2E")
 
 
-  p1 <- ggplot(dfx, aes(x=x, y=y)) +
-    geom_tile(color = "white", size = 4, fill = colour_x)+
-    geom_text(aes(label = labels_x), color = "white",
+  p1 <- ggplot2::ggplot(dfx, ggplot2::aes(x=x, y=y)) +
+    ggplot2::geom_tile(color = "white", size = 4, fill = colour_x)+
+    ggplot2::geom_text(ggplot2::aes(label = labels_x), color = "white",
               size = 5, family="Patua")+
-    coord_flip()+
-    labs(title = "Data joins of data A and B")+
-    theme_void()+
-    theme(text=element_text(family="Patua"))+
-    theme(plot.title = element_text(size=22, face = "bold"))
+    ggplot2::coord_flip()+
+    ggplot2::labs(title = "Data joins of data A and B")+
+    ggplot2::theme_void()+
+    ggplot2::theme(text=ggplot2::element_text(family="Patua"))+
+    ggplot2::theme(plot.title = ggplot2::element_text(size=22, face = "bold"))
 
 
 
@@ -37,13 +38,13 @@ showplot <- function(variables) {
   colour_y <-  c("#e9c46a" , "#939191", "#6E55A1", "#302E2E",
                  "#e9c46a" , "#939191", "#6E55A1", "#302E2E")
 
-  p2 <- ggplot(dfx, aes(x=x, y=y)) +
-    geom_tile(color = "white", size = 4, fill = colour_y)+
-    geom_text(aes(label = labels_y), color = "white",
+  p2 <- ggplot2::ggplot(dfx, ggplot2::aes(x=x, y=y)) +
+    ggplot2::geom_tile(color = "white", size = 4, fill = colour_y)+
+    ggplot2::geom_text(ggplot2::aes(label = labels_y), color = "white",
               size = 5, family="Patua")+
-    coord_flip()+
-    theme_void()+
-    theme(text=element_text(family="Patua"))
+    ggplot2::coord_flip()+
+    ggplot2::theme_void()+
+    ggplot2::theme(text=ggplot2::element_text(family="Patua"))
 
   df_ij <- expand.grid(x = 1:3, y = 1:3)
 
@@ -55,14 +56,15 @@ showplot <- function(variables) {
                   "#939191" , "#6E55A1", "#302E2E",
                   "#939191" , "#6E55A1", "#302E2E")
 
-  p3 <- ggplot(df_ij, aes(x=x, y=y)) +
-    geom_tile(color = "white", size = 4, fill = colour_ij)+
-    geom_text(aes(label = labels_ij), color = "white",
+  p3 <- ggplot2::ggplot(df_ij, ggplot2::aes(x=x, y=y)) +
+    ggplot2::geom_tile(color = "white",
+                       size = 4, fill = colour_ij)+
+    ggplot2::geom_text(ggplot2::aes(label = labels_ij), color = "white",
               size = 5, family="Patua")+
-    coord_flip()+
-    ggtitle("A: Inner join()")+
-    theme_void()+
-    theme(text=element_text(family="Patua"))
+    ggplot2::coord_flip()+
+    ggplot2::ggtitle("A: Inner join()")+
+    ggplot2::theme_void()+
+    ggplot2::theme(text=ggplot2::element_text(family="Patua"))
 
 
 
@@ -78,14 +80,14 @@ showplot <- function(variables) {
                   "#C51717", "#1363B3", "#939191", "#6E55A1", "#302E2E",
                   "#e9c46a", "#C51717", "#939191", "#6E55A1", "#302E2E")
 
-  p4 <- ggplot(df_fj, aes(x=x, y=y)) +
-    geom_tile(color = "white", size = 4, fill = colour_fj)+
-    geom_text(aes(label = labels_fj), color = "white",
+  p4 <- ggplot2::ggplot(df_fj, ggplot2::aes(x=x, y=y)) +
+    ggplot2::geom_tile(color = "white", size = 4, fill = colour_fj)+
+    ggplot2::geom_text(ggplot2::aes(label = labels_fj), color = "white",
               size = 5, family="Patua")+
-    coord_flip()+
-    ggtitle("B: Full join()")+
-    theme_void()+
-    theme(text=element_text(family="Patua"))
+    ggplot2::coord_flip()+
+    ggplot2::ggtitle("B: Full join()")+
+    ggplot2::theme_void()+
+    ggplot2::theme(text=ggplot2::element_text(family="Patua"))
 
 
 
@@ -99,14 +101,15 @@ showplot <- function(variables) {
                   "#1363B3", "#939191", "#6E55A1", "#302E2E",
                   "#C51717", "#939191", "#6E55A1", "#302E2E")
 
-  p5 <- ggplot(df_lj, aes(x=x, y=y)) +
-    geom_tile(color = "white", size = 4, fill = colour_lj)+
-    geom_text(aes(label = labels_lj), color = "white",
+  p5 <- ggplot2::ggplot(df_lj, ggplot2::aes(x=x, y=y)) +
+    ggplot2::geom_tile(color = "white",
+                       size = 4, fill = colour_lj)+
+    ggplot2::geom_text(ggplot2::aes(label = labels_lj), color = "white",
               size = 5, family="Patua")+
-    coord_flip()+
-    ggtitle("C: Left join()")+
-    theme_void()+
-    theme(text=element_text(family="Patua"))
+    ggplot2::coord_flip()+
+    ggplot2::ggtitle("C: Left join()")+
+    ggplot2::theme_void()+
+    ggplot2::theme(text=ggplot2::element_text(family="Patua"))
 
 
   #Right join#############
@@ -121,19 +124,17 @@ showplot <- function(variables) {
                   "#C51717", "#939191", "#6E55A1", "#302E2E",
                   "#e9c46a", "#939191", "#6E55A1", "#302E2E")
 
-  p6 <- ggplot(df_rj, aes(x=x, y=y)) +
-    geom_tile(color = "white", size = 4, fill = colour_rj)+
-    geom_text(aes(label = labels_rj), color = "white",
+  p6 <- ggplot2::ggplot(df_rj, ggplot2::aes(x=x, y=y)) +
+    ggplot2::geom_tile(color = "white", size = 4, fill = colour_rj)+
+    ggplot2::geom_text(ggplot2::aes(label = labels_rj), color = "white",
               size = 5, family="Patua")+
-    coord_flip()+
-    ggtitle("D: Right join()")+
-    theme_void()+
-    theme(text=element_text(family="Patua"))
+    ggplot2::coord_flip()+
+    ggplot2::ggtitle("D: Right join()")+
+    ggplot2::theme_void()+
+    ggplot2::theme(text=ggplot2::element_text(family="Patua"))
 
-  (p1 | p2) /
-    (p3 | p4) /
-    (p5 | p6)
-
+  patch <- (p1 | p2) / (p3 | p4) / (p5 | p6)
+  patch
 
 }
 
