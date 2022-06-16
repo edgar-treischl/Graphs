@@ -17,7 +17,9 @@ path <- paste( "Rmd/", Rmd_Files, sep = "" )
 #source("Rmd/utils.R")
 
 ```
-### Anscombe quartet
+This page shows illustration of well-known graphs.
+
+## Anscombe quartet
 
 ```{r anscombe_quartet, eval=FALSE}
 library(Graphs)
@@ -28,7 +30,7 @@ plotgraph("anscombe_quartet.R")
 knitr::include_graphics("anscombe.png")
 ```
 
-### Boxplot Illustration
+## Boxplot Illustration
 
 ```{r boxplot1, eval=FALSE}
 plotgraph("boxplot_illustration.R")
@@ -38,7 +40,7 @@ plotgraph("boxplot_illustration.R")
 knitr::include_graphics("boxplot1.png")
 ```
 
-### Boxplot pitfalls
+## Boxplot pitfalls
 
 ```{r boxplot2, eval=FALSE}
 plotgraph("boxplot_pitfalls.R")
@@ -48,7 +50,7 @@ plotgraph("boxplot_pitfalls.R")
 knitr::include_graphics("boxplot2.png")
 ```
 
-### Data joins
+## Data joins
 
 
 ```{r joins, eval=FALSE}
@@ -59,7 +61,7 @@ plotgraph("data_joins.R")
 knitr::include_graphics("joins.png")
 ```
 
-### Data saurus
+## Data saurus
 
 
 ```{r datasaurus, eval=FALSE}
@@ -71,7 +73,7 @@ knitr::include_graphics("saurus.png")
 ```
 
 
-### Gapminder
+## Gapminder
 
 
 ```{r gapminder, eval=FALSE}
@@ -83,7 +85,7 @@ knitr::include_graphics("gapminder.png")
 ```
 
 
-### Pac-Man
+## Pac-Man
 
 ```{r pacman, eval=FALSE}
 Graphs::plotgraph("pacman.R")
@@ -96,7 +98,7 @@ knitr::include_graphics("pacman.png")
 
 
 
-### Simpson's paradox
+## Simpson's paradox
 
 ```{r simpson, eval=FALSE}
 Graphs::plotgraph("simpson.R")
@@ -106,7 +108,7 @@ Graphs::plotgraph("simpson.R")
 knitr::include_graphics("simpson.png")
 ```
 
-### UCB Admission
+## UCB Admission
 
 ```{r ucb, eval=FALSE}
 Graphs::plotgraph("ucb_admission.R")

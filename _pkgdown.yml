@@ -1,14 +1,18 @@
 url: https://edgar-treischl.github.io/Graphs/
 template:
   bootstrap: 5
-  bootswatch: simplex
+  bootswatch: litera
 navbar:
   structure:
-    left:
-    - intro
-    - reference
-    - articles
     right: [github]
+  components:
+   articles:
+    text: Articles
+    menu:
+    - text: Illustrations
+      href: articles/web_only/illustrations.html
+    - text: Helpers
+      href: articles/examples.html
 development:
   mode: auto
 authors:
