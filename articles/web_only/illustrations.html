@@ -41,8 +41,8 @@
 <li class="active nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../../articles/examples.html">Examples</a>
     <a class="dropdown-item" href="../../articles/web_only/illustrations.html">Illustrations</a>
+    <a class="dropdown-item" href="../../articles/examples.html">Helpers</a>
   </div>
 </li>
       </ul>
@@ -50,7 +50,14 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../../search.json" id="search-input" placeholder="Search for" autocomplete="off">
 </form>
 
-      <ul class="navbar-nav"></ul>
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/edgar-treischl/Graphs/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 
     
@@ -64,72 +71,73 @@
       <img src="" class="logo" alt=""><h1>Illustrations</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/edgar-treischl/Graphs/blob/HEAD/vignettes/web_only/illustrations.Rmd" class="external-link"><code>vignettes/web_only/illustrations.Rmd</code></a></small>
       <div class="d-none name"><code>illustrations.Rmd</code></div>
     </div>
 
     
     
-<div class="section level3">
-<h3 id="anscombe-quartet">Anscombe quartet<a class="anchor" aria-label="anchor" href="#anscombe-quartet"></a>
-</h3>
+<p>This page shows illustration of well-known graphs.</p>
+<div class="section level2">
+<h2 id="anscombe-quartet">Anscombe quartet<a class="anchor" aria-label="anchor" href="#anscombe-quartet"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://edgar-treischl.github.io/Graphs/">Graphs</a></span><span class="op">)</span>
 <span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"anscombe_quartet.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="anscombe.png" title="Anscombe quartet by Edgar Treischl" alt="Anscombe quartet by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="boxplot-illustration">Boxplot Illustration<a class="anchor" aria-label="anchor" href="#boxplot-illustration"></a>
-</h3>
+<div class="section level2">
+<h2 id="boxplot-illustration">Boxplot Illustration<a class="anchor" aria-label="anchor" href="#boxplot-illustration"></a>
+</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"boxplot_illustration.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="boxplot1.png" title="Boxplot Illustration by Edgar Treischl" alt="Boxplot Illustration by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="boxplot-pitfalls">Boxplot pitfalls<a class="anchor" aria-label="anchor" href="#boxplot-pitfalls"></a>
-</h3>
+<div class="section level2">
+<h2 id="boxplot-pitfalls">Boxplot pitfalls<a class="anchor" aria-label="anchor" href="#boxplot-pitfalls"></a>
+</h2>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"boxplot_pitfalls.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="boxplot2.png" title="Boxplot Pitfalls by Edgar Treischl" alt="Boxplot Pitfalls by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="data-joins">Data joins<a class="anchor" aria-label="anchor" href="#data-joins"></a>
-</h3>
+<div class="section level2">
+<h2 id="data-joins">Data joins<a class="anchor" aria-label="anchor" href="#data-joins"></a>
+</h2>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"data_joins.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="joins.png" title="Data joins by Edgar Treischl" alt="Data joins by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="data-saurus">Data saurus<a class="anchor" aria-label="anchor" href="#data-saurus"></a>
-</h3>
+<div class="section level2">
+<h2 id="data-saurus">Data saurus<a class="anchor" aria-label="anchor" href="#data-saurus"></a>
+</h2>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"datasaurus.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="saurus.png" title="Data saurus by Edgar Treischl" alt="Data saurus by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="gapminder">Gapminder<a class="anchor" aria-label="anchor" href="#gapminder"></a>
-</h3>
+<div class="section level2">
+<h2 id="gapminder">Gapminder<a class="anchor" aria-label="anchor" href="#gapminder"></a>
+</h2>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"gapminder.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="gapminder.png" title="Gapminder by Edgar Treischl" alt="Gapminder by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="pac-man">Pac-Man<a class="anchor" aria-label="anchor" href="#pac-man"></a>
-</h3>
+<div class="section level2">
+<h2 id="pac-man">Pac-Man<a class="anchor" aria-label="anchor" href="#pac-man"></a>
+</h2>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">Graphs</span><span class="fu">::</span><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"pacman.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="pacman.png" title="The Pacman plot by Edgar Treischl" alt="The Pacman plot by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="simpsons-paradox">Simpson’s paradox<a class="anchor" aria-label="anchor" href="#simpsons-paradox"></a>
-</h3>
+<div class="section level2">
+<h2 id="simpsons-paradox">Simpson’s paradox<a class="anchor" aria-label="anchor" href="#simpsons-paradox"></a>
+</h2>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">Graphs</span><span class="fu">::</span><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"simpson.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="simpson.png" title="Simpsons Paradox by Edgar Treischl" alt="Simpsons Paradox by Edgar Treischl"></p>
 </div>
-<div class="section level3">
-<h3 id="ucb-admission">UCB Admission<a class="anchor" aria-label="anchor" href="#ucb-admission"></a>
-</h3>
+<div class="section level2">
+<h2 id="ucb-admission">UCB Admission<a class="anchor" aria-label="anchor" href="#ucb-admission"></a>
+</h2>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">Graphs</span><span class="fu">::</span><span class="fu"><a href="../../reference/plotgraph.html">plotgraph</a></span><span class="op">(</span><span class="st">"ucb_admission.R"</span><span class="op">)</span></code></pre></div>
 <p><img src="ucb.png" title="UCB Plot by Edgar Treischl" alt="UCB Plot by Edgar Treischl"></p>
