@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Graphs is a personal package and a vehicle for graphs made with R. It installs the source code of illustrations and other graphs that I made and provides convenient functions to make graphs with `ggplot2` (e.g. slope plots.)
+This site is the home, a personal package, and a vehicle for graphs made with R. It installs the source code of illustrations and other graphs that I made and provides convenient functions to make graphs with `ggplot2` (e.g. slope plots.)
 
 ## Installation
 
