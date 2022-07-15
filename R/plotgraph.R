@@ -27,7 +27,8 @@ plotgraph <- function(name) {
   directory <- system.file("graphs/", package = "Graphs")
   #file_R <- ".R"
 
-  file_final <- paste0(directory, name)
+  file_final <- paste(directory, name, sep = "/")
+
 
   source(file_final)
   showplot()
