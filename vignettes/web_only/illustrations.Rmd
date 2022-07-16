@@ -50,6 +50,18 @@ plotgraph("boxplot_pitfalls.R")
 knitr::include_graphics("boxplot2.png")
 ```
 
+
+## Data format
+
+
+```{r, eval=FALSE}
+plotgraph("long_wide.R")
+```
+
+```{r, echo=FALSE, fig.alt='Data joins by Edgar Treischl'}
+knitr::include_graphics("long_wide.png")
+```
+
 ## Data joins
 
 

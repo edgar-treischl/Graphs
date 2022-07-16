@@ -14,8 +14,8 @@ showplot <- function(variables) {
   labels_x <- c("3", "2", "1", "ID",
                 "x3" , "x2",  "x1", "X")
 
-  colour_x <-  c("#74a9cf" , "#0570b0", "#045a8d", "#023858",
-                 "#74a9cf" , "#0570b0", "#045a8d", "#023858")
+  colour_x <-  c("#74a9cf" , "#0570b0", "#045a8d", "#302E2E",
+                 "#74a9cf" , "#0570b0", "#045a8d", "#302E2E")
 
 
   p1 <- ggplot2::ggplot(dfx, ggplot2::aes(x=x, y=y)) +
@@ -35,8 +35,8 @@ showplot <- function(variables) {
 
   labels_y <- c("4", "2", "1", "ID",
                 "y4" , "y2",  "y1", "Y")
-  colour_y <-  c("#a6bddb" , "#0570b0", "#045a8d", "#023858",
-                 "#a6bddb" , "#0570b0", "#045a8d", "#023858")
+  colour_y <-  c("#023858" , "#0570b0", "#045a8d", "#302E2E",
+                 "#023858" , "#0570b0", "#045a8d", "#302E2E")
 
   p2 <- ggplot2::ggplot(dfx, ggplot2::aes(x=x, y=y)) +
     ggplot2::geom_tile(color = "white", size = 1, fill = colour_y)+
@@ -48,15 +48,16 @@ showplot <- function(variables) {
 
   p2
 
+
   df_ij <- expand.grid(x = 1:3, y = 1:3)
 
 
   labels_ij <- c("2", "1", "ID",
                  "x2", "x1" , "X",
                  "y2",  "y1", "Y")
-  colour_ij <-  c("#0570b0" , "#045a8d", "#023858",
-                  "#0570b0" , "#045a8d", "#023858",
-                  "#0570b0" , "#045a8d", "#023858")
+  colour_ij <-  c("#0570b0" , "#045a8d", "#302E2E",
+                  "#0570b0" , "#045a8d", "#302E2E",
+                  "#0570b0" , "#045a8d", "#302E2E")
 
   p3 <- ggplot2::ggplot(df_ij, ggplot2::aes(x=x, y=y)) +
     ggplot2::geom_tile(color = "white",
@@ -78,9 +79,9 @@ showplot <- function(variables) {
   labels_fj <- c("4", "3", "2", "1", "ID",
                  "NA", "x3" , "x2",  "x1", "X",
                  "y4", "NA" , "y2",  "y1", "Y")
-  colour_fj <-  c("#a6bddb", "#74a9cf", "#0570b0", "#045a8d", "#023858",
-                  "#c1121f", "#74a9cf", "#0570b0", "#045a8d", "#023858",
-                  "#a6bddb", "#c1121f", "#0570b0", "#045a8d", "#023858")
+  colour_fj <-  c("#023858", "#74a9cf", "#0570b0", "#045a8d", "#302E2E",
+                  "#c1121f", "#74a9cf", "#0570b0", "#045a8d", "#302E2E",
+                  "#023858", "#c1121f", "#0570b0", "#045a8d", "#302E2E")
 
   p4 <- ggplot2::ggplot(df_fj, ggplot2::aes(x=x, y=y)) +
     ggplot2::geom_tile(color = "white", size = 1, fill = colour_fj)+
@@ -99,9 +100,9 @@ showplot <- function(variables) {
   labels_lj <- c("3", "2", "1", "ID",
                  "x3" , "x2",  "x1", "X",
                  "NA" , "y2",  "y1", "Y")
-  colour_lj <-  c("#74a9cf", "#0570b0", "#045a8d", "#023858",
-                  "#74a9cf", "#0570b0", "#045a8d", "#023858",
-                  "#c1121f", "#0570b0", "#045a8d", "#023858")
+  colour_lj <-  c("#74a9cf", "#0570b0", "#045a8d", "#302E2E",
+                  "#74a9cf", "#0570b0", "#045a8d", "#302E2E",
+                  "#c1121f", "#0570b0", "#045a8d", "#302E2E")
 
   p5 <- ggplot2::ggplot(df_lj, ggplot2::aes(x=x, y=y)) +
     ggplot2::geom_tile(color = "white",
@@ -118,13 +119,12 @@ showplot <- function(variables) {
 
   df_rj <- expand.grid(x = 1:4, y = 1:3)
 
-
   labels_rj <- c("4", "2", "1", "ID",
-                 "NA", "x2" , "x1", "X",
-                 "y4", "y2", "y1", "Y")
-  colour_rj <-  c("#a6bddb", "#0570b0", "#045a8d", "#023858",
-                  "#c1121f", "#0570b0", "#045a8d", "#023858",
-                  "#a6bddb", "#0570b0", "#045a8d", "#023858")
+                 "y4", "y2" , "y1", "Y",
+                 "NA", "x2", "x1", "X")
+  colour_rj <-  c("#023858", "#0570b0", "#045a8d", "#302E2E",
+                  "#023858", "#0570b0", "#045a8d", "#302E2E",
+                  "#c1121f", "#0570b0", "#045a8d", "#302E2E")
 
   p6 <- ggplot2::ggplot(df_rj, ggplot2::aes(x=x, y=y)) +
     ggplot2::geom_tile(color = "white", size = 1, fill = colour_rj)+
