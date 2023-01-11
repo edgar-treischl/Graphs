@@ -1,7 +1,9 @@
 url: https://edgar-treischl.github.io/Graphs/
 template:
   bootstrap: 5
-  bootswatch: litera
+  bootswatch: simplex
+  bslib:
+    primary: "#2a9d8f"
 navbar:
   structure:
     right: [github]
